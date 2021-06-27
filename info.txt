@@ -1,0 +1,44 @@
+Salam, Arzu Bədəlzadə.
+Sizin diplom işinizin mövzusu barədə məlumat vermək istəyirəm.
+Əvvəlcə gördüyünüz kimi html sənədi yaratdıq və internetdən rastgələ background.jpg şəklini endirdik
+daha sonra 
+Internal css ile style teqləri içinə şəkli təyin etdik.
+Body teqi içinə gəlib img teqi vasitəsilə giphy.org saytından arı gifini yerləşdirdik.
+Gif - hərəkət edən şəkil formatıdır
+
+bizə iki stil atributu lazımdır : margin-top və margin-left. Onlara uyğun DOM-dan düzəlişlər edirik.
+
+
+Deməli, gəlib <body onkeydown="delisovAriniHereketeGetir(event)">
+funksiyasini 
+cagiririq
+Ardinca script teqleri icerisinde funksiyani yaradiriq
+bizim sade oyunumuzda ne olacaq?
+agcaqanad ireli geri saga sola hereket edecek... Amma nece?
+gelib deyirsen kimi
+function delisovAriniHereketeGetir(event) {
+    alert(event.keyCode)
+}
+
+bu funksiyanin icerisinde yazdigimiz keyCode - KeyBoard Code sozunun qisaldilmasidir,
+yeni bu ozumzuden atdigimiz kod deyil, duz yazdigina emin olmalisiniz.
+helelik 4 klavish ucun baxacagiq veziyyete : klaviaturanin ox klavishleri ucun (sol, yuxari sag asagi oxlar)
+
+demeli, yuxarida yazdigimiz funksiyada sol klavishe klikleyende (ve ya sag yuxari asagi ferqi yoxdur)
+her birinin kodunu yazacaq size.
+O kodlari if else if vasitesile yoxlayacaqsiniz.
+
+
+ if(event.keyCode ==39) {
+            
+            sol = sol + 10
+            document.getElementById('agcaqanad').style.marginLeft = sol + "px"
+        }
+
+        meselen bu kodda sag klavisihin keyCodeu 39 oldugu ucun her defesinde kliklediyimiz zaman
+
+document.getElementById('agcaqanad').style.marginLeft = sol + "px"
+dom vasitesile kliklenme veziyyeti ile elaqeli olaraq sol deyishenin qiymeti artacaq ve 
+.style.marginLeft = sol + "px" ve bu koda gore margin-left her defe 10 px artacaq 
+buna gore de ari qabaga gedecek. Diger kodlara da ozun bax ve tehlil ele veziyyeti.
+eyni mentiqdir ve coo...ox sadedir.
